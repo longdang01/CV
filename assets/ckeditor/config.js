@@ -9,6 +9,10 @@ CKEDITOR.editorConfig = function( config ) {
 	config.entities_latin = false;
 	config.language = 'vi';
 	config.uiColor = '#AADC6E';
+	config.allowedContent = true;
+	config.extraAllowedContent = 'div(*)';
+	config.autoGrow_onStartup = true;
+	config.resize_maxWidth = 750;
     
     config.toolbar = [
 		'/',

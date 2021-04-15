@@ -19,24 +19,29 @@
 <body>
     
     <div class="wrapper">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
         <nav class="nav">
 
             <div class="nav-img">
                 <div class="nav-img-overlay"></div>
                 <i class="fas fa-upload"></i>
-                <img src="./assets/img/avatar.jpg" alt="Avatar"/>
-                <input type="file" class="nav-img-upload">
+                <img id="avatar-img" src="./assets/img/avatar.jpg" alt="Avatar"/>
+                <input type="file" class="nav-img-upload" onchange="readURL(this, '#avatar-img');">
             </div>
 
             <ul class="nav-list">
                 <li class="nav-item"><a href="#about" class="nav-link about current-page">About</a></li>
                 <li class="nav-item"><a href="#research" class="nav-link research">Research Interests</a></li>
                 <li class="nav-item"><a href="#academic" class="nav-link academic">Academic record</a></li>
-                <!-- <li class="nav-item"><a href="#teaching" class="nav-link teaching">Teaching</a></li>
-                <li class="nav-item"><a href="#research" class="nav-link thesis">Thesis Advising</a></li>
-                <li class="nav-item"><a href="#research" class="nav-link research-grant">Research Grant</a></li> -->
+                <li class="nav-item"><a href="#teaching" class="nav-link teaching">Teaching</a></li>
+                <li class="nav-item"><a href="#thesis" class="nav-link thesis">Thesis Advising</a></li>
+                <li class="nav-item"><a href="#grant" class="nav-link grant">Research Grant</a></li>
                 <li class="nav-item"><a href="#publication" class="nav-link publication">Publications</a></li>
-                <!-- <li class="nav-item"><a href="#projects" class="nav-link projects">R & D Project</a></li> -->
             </ul>
         </nav>
 
@@ -48,7 +53,7 @@
                 <div id="work" class="work-list">
                     <i class="fas fa-plus-circle btn-plus btn-plus-about"></i>
 
-                    <div id="sortlist1">
+                    <div class="list sortlist">
                         <div>
                             <i class="fas fa-trash-alt btn-trash"></i>
                             <div>Department of Software Engineering</div>
@@ -93,7 +98,7 @@
                     RESEARCH INTERESTS
                     <i class="fas fa-plus-circle btn-plus"></i>
                 </div>
-                <div class="research-list" id="sortlist2">
+                <div class="research-list" id="sortlist1">
                     <div>
                         <i class="fas fa-trash-alt btn-trash"></i>
                         <div>SOFTWARE QUALITY; SOFTWARE TESTING; METHODS IN SOFTWARE DEVELOPMENT</div>
@@ -115,7 +120,7 @@
                     <i class="fas fa-plus-circle btn-plus"></i>
                 </div>
 
-                <div class="academic-list" id="sortlist3">
+                <div class="academic-list sortlist">
                     <div class="academic-item">
                         <i class="fas fa-trash-alt btn-trash mg-top"></i>
                         <div>
@@ -132,33 +137,101 @@
                 </div>
             </section>
 
-            <!-- <section id="teaching"  class="teaching-container">
+            <section id="teaching" class="teaching-container">
                 <div class="teaching-title">
                     Teaching
                     <i class="fas fa-plus-circle btn-plus"></i>
                 </div>
 
-                <div class="teaching-list">
+                <div class="teaching-list sortlist">
                     <div>
                         <i class="fas fa-trash-alt btn-trash"></i>
                         <div class="teaching-year">
-                            <div contenteditable="true">2018 - 2019</div>
+                            <div contenteditable="true"> 2018 - 2019</div>
                             <i class="fas fa-plus-circle btn-plus"></i>
                         </div>
-                        <div class="teaching-content" id="sortlist3">
+                        <div class="teaching-content" id="sortlist2">
                             <div>
                                 <i class="fas fa-trash-alt btn-trash"></i>
-                                <div>IT5630 - Advanced Project Management</div>
+                                <div>IT5630 - Advanced Project Management</div> 
                             </div>
 
                             <div>
                                 <i class="fas fa-trash-alt btn-trash"></i>
-                                <div>IT5630 - Advanced Project Management</div>
+                                <div>IT5630 - Advanced Project Management</div> 
                             </div>
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
+
+            <section id="thesis" class="thesis-container">
+                <div>
+                    <div class="thesis-link-title">
+                        THESIS
+                        <i class="fas fa-plus-circle btn-plus"></i>
+                    </div>
+                    <div class="thesis-link-list" id="sortlist3">
+                        <div>
+                            <i class="fas fa-trash-alt btn-trash"></i>
+                            <div>Proposed Topics for Undergraduate (2018-2019)</div>
+                        </div>
+
+                        <div>
+                            <i class="fas fa-trash-alt btn-trash"></i>
+                            <div>Proposed Topics for Undergraduate (2018-2019)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="thesis-title">
+                        <i class="fas fa-plus-circle btn-plus"></i>
+                    </div>
+    
+                    <div class="thesis-list sortlist">
+                        <div>
+                            <i class="fas fa-trash-alt btn-trash"></i>
+                            <div class="thesis-year">
+                                <div contenteditable="true">Phd Thesis Supervised</div>
+                                <i class="fas fa-plus-circle btn-plus"></i>
+                            </div>
+                            <div class="thesis-content" id="sortlist4">
+                                <div>
+                                    <i class="fas fa-trash-alt btn-trash"></i>
+                                    <div>Pham Thi Quynh (2007-2010): Measurement and checking Web service and business process</div> 
+                                </div>
+    
+                                <div>
+                                    <i class="fas fa-trash-alt btn-trash"></i>
+                                    <div>Nguyen Minh Quy (10/2010-10/2014): Performance Analysis of Parallel Computing Architectures</div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="grant" class="grant-container">
+                <div class="grant-title">
+                    RESEARCH GRANTS
+                    <i class="fas fa-plus-circle btn-plus"></i>
+                </div>
+                <div class="grant-list" id="sortlist5">
+                    <div>
+                        <i class="fas fa-trash-alt btn-trash"></i>
+                        <div>Cloud service technologies - creation and providing services, provide digital content, access management. Funded by the Ministry of Science and Technology. Project Code KC.01.01/11-15</div>
+                    </div>
+                    <div>
+                        <i class="fas fa-trash-alt btn-trash"></i>
+                        <div>Research on Cloud Computing/Map-Reduce and Application in Student and Alumni information Management and Extraction. Funded by the Ministry of Education and Training. Project Code B2010-01-411-TĐ. http://www.BKProfile.com (in Vietnamese)</div>
+                    </div>
+                    <div>
+                        <i class="fas fa-trash-alt btn-trash"></i>
+                        <div>Mechanism and Advanced Techniques for Software Development and Software Quality Assurance (2006-2009). Funded by the Ministry of Science and Technology. Project Code: KHCB2.034.06.</div>
+                    </div>
+                </div>
+            </section> 
 
             <section id="publication" class="publication-container">
                 <div class="publication-title">
@@ -166,14 +239,14 @@
                     <i class="fas fa-plus-circle btn-plus"></i>
                 </div>
 
-                <div class="publication-list">
+                <div class="publication-list sortlist">
                     <div>
                         <i class="fas fa-trash-alt btn-trash"></i>
                         <div class="publication-year">
                             <div contenteditable="true">2021</div>
                             <i class="fas fa-plus-circle btn-plus"></i>
                         </div>
-                        <div class="publication-content" id="sortlist4">
+                        <div class="publication-content" id="sortlist6">
                             <div>
                                 <i class="fas fa-trash-alt btn-trash"></i>
                                 <div>Van-Quyet Nguyen, Huu-Duy Nguyen, Quyet-Thang Huynh, Nalini Venkatasubramanian, Kyungbaek Kim, "A Scalable Approach for Dynamic Evacuation Routing in Large Smart Buildings", In Proceedings of the Fifth International Conference on Smart Computing (SMARTCOMP 2019), June 12-14, 2019, Washington D.C., US. (to be appeared)</div> 
@@ -197,7 +270,9 @@
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
     <script src="./assets/ckeditor/ckeditor.js"></script>
     <script src="./assets/ckeditor/config.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script> -->
+    <script src="https://unpkg.com/sortablejs-make/Sortable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-sortablejs@latest/jquery-sortable.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>
